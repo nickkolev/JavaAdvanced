@@ -6,14 +6,13 @@ import java.util.Scanner;
 import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
-public class P1ConsumerPrint {
+public class P2KnightsOfHonor {
     public static void main(String[] args) {
-
         Scanner scanner = new Scanner(System.in);
 
         List<String> input = Arrays.stream(scanner.nextLine().split(" ")).collect(Collectors.toList());
 
-        Consumer<String> printer = System.out::println;
+        Consumer printer = e -> System.out.println("Sir " + e);
         input.forEach(printer);
     }
 }
